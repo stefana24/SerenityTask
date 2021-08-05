@@ -9,13 +9,13 @@ import java.util.List;
 
 public class ShoppingCartPage extends BasePage {
     @FindBy(css=".success-msg")
-    private WebElementFacade addedMessage;
+    private WebElementFacade successMessage;
 
     @FindBy(css = ".cart-table tbody tr")
     List<WebElementFacade> listOfCartProducts;
 
     public boolean isAddedMessage(String productName){
-        return addedMessage.getText().equalsIgnoreCase(productName+ Constants.WAS_ADDED_TO_SHOPPING_CART_MESSAGE);
+        return successMessage.getText().equalsIgnoreCase(productName+ Constants.WAS_ADDED_TO_SHOPPING_CART_MESSAGE);
     }
 
     public boolean isProductInCart(String name){
