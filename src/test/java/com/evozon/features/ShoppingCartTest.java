@@ -9,7 +9,7 @@ import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 
-public class ShoppingCartTest extends BaseTest{
+public class ShoppingCartTest extends BaseTest {
 
     @Steps
     private CategorySteps categorySteps;
@@ -25,10 +25,10 @@ public class ShoppingCartTest extends BaseTest{
 
 
     @Test
-    public void addProductToCartWithLoginTest(){
+    public void addProductToCartWithLoginTest() {
         logInStep.loginWithValidCredentials();
         driver.navigate().to(Constants.BASE_URL);
-        categorySteps.navigateToCategoryAndSubcategory("men","new arrivals");
+        categorySteps.navigateToCategoryAndSubcategory("men", "new arrivals");
         categorySteps.clickOnProduct("linen blazer");
         productSteps.clickOnAddToCart();
         productSteps.verifyColorErrorMessage();

@@ -6,36 +6,34 @@ import org.openqa.selenium.By;
 
 public class ProductPage extends BasePage {
 
-    @FindBy(css="#advice-required-entry-attribute92")
+    @FindBy(css = "#advice-required-entry-attribute92")
     private WebElementFacade colorRequiredMessage;
 
-    @FindBy(css="#advice-required-entry-attribute180")
+    @FindBy(css = "#advice-required-entry-attribute180")
     private WebElementFacade sizeRequiredMessage;
 
-    @FindBy(css=".add-to-cart-buttons button")
+    @FindBy(css = ".add-to-cart-buttons button")
     private WebElementFacade addToCartBtn;
 
 
-
-    public void clickOnAddToCartButton(){
+    public void clickOnAddToCartButton() {
         clickOn(addToCartBtn);
     }
 
-    public boolean isColorRequiredMessage(){
+    public boolean isColorRequiredMessage() {
         return colorRequiredMessage.isDisplayed();
     }
 
-    public boolean isSizeRequiredMessage(){
+    public boolean isSizeRequiredMessage() {
         return sizeRequiredMessage.isDisplayed();
     }
 
-    public void selectColor(String color){
-        getDriver().findElement(By.cssSelector("#configurable_swatch_color a[title='"+color+"']")).click();
+    public void selectColor(String color) {
+        getDriver().findElement(By.cssSelector("#configurable_swatch_color a[title='" + color + "']")).click();
     }
 
-    public void selectSize(String size){
-        getDriver().findElement(By.cssSelector("#configurable_swatch_size a[title='"+size+"'")).click();
+    public void selectSize(String size) {
+        getDriver().findElement(By.cssSelector("#configurable_swatch_size a[title='" + size + "'")).click();
     }
-
 
 }

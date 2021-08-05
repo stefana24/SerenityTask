@@ -8,10 +8,9 @@ public class DashboardPage extends BasePage {
     private WebElementFacade welcomeMessage;
 
 
-    public boolean isWelcomeMessage(String text){
+    public boolean isWelcomeMessage(String text) {
         String message = "Hello, " + text + "!";
         return welcomeMessage.containsOnlyText(message);
     }
-
 
 }

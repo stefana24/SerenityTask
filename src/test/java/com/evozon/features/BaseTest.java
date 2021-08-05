@@ -14,7 +14,7 @@ public class BaseTest {
     protected WebDriver driver;
 
     @Before
-    public void setup(){
+    public void setup() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to("http://qa2.dev.evozon.com/");

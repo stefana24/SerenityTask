@@ -6,80 +6,80 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
 
-public class RegisterPage extends BasePage{
+public class RegisterPage extends BasePage {
 
-    @FindBy(css="button[title='Register']")
+    @FindBy(css = "button[title='Register']")
     private WebElementFacade registerButton;
 
-    @FindBy(css=".form-list .input-box input[class*='input-text']")
+    @FindBy(css = ".form-list .input-box input[class*='input-text']")
     private List<WebElementFacade> createAccountFields;
 
-    public List<WebElementFacade> getCreateAccountFields(){
+    public List<WebElementFacade> getCreateAccountFields() {
         return createAccountFields;
     }
 
 
-    @FindBy(css=".validation-advice")
+    @FindBy(css = ".validation-advice")
     private WebElementFacade requiredFieldMessage;
 
-    @FindBy(css="input[type='checkbox']")
+    @FindBy(css = "input[type='checkbox']")
     private WebElementFacade checkboxBtn;
 
-    public void clickOnCheckBox(){
+    public void clickOnCheckBox() {
         clickOn(checkboxBtn);
     }
 
-    public boolean isRequiredFieldMsgDisplayed(){
+    public boolean isRequiredFieldMsgDisplayed() {
         element(requiredFieldMessage).waitUntilVisible();
         return requiredFieldMessage.isDisplayed();
     }
 
-    public void clickOnRegisterBtn(){
+    public void clickOnRegisterBtn() {
         clickOn(registerButton);
     }
 
 
-    public void insertDataWithoutFirstName(){
-        for(int i=1;i<createAccountFields.size();i++) {
+    public void insertDataWithoutFirstName() {
+        for (int i = 1; i < createAccountFields.size(); i++) {
             typeInto(createAccountFields.get(i), Constants.ACCOUNT_DATA_ARRAY[i]);
         }
     }
 
     //general function
     //index of field we want to left empty
-    public void insertDataWithout(int index){
-        for(int i=0;i<index;i++){
+    public void insertDataWithout(int index) {
+        for (int i = 0; i < index; i++) {
             typeInto(createAccountFields.get(i), Constants.ACCOUNT_DATA_ARRAY[i]);
         }
-        for(int i=index+1;i<createAccountFields.size();i++) {
+        for (int i = index + 1; i < createAccountFields.size(); i++) {
             typeInto(createAccountFields.get(i), Constants.ACCOUNT_DATA_ARRAY[i]);
         }
     }
 
-    public void insertDataWithoutLastName(){
+    public void insertDataWithoutLastName() {
         insertDataWithout(2);
     }
 
-    public void makeFieldsEmpty(){
-        for(int i=0;i<createAccountFields.size();i++) {
-            createAccountFields.get(i).clear();
+    public void makeFieldsEmpty() {
+        for (WebElementFacade createAccountField:createAccountFields ) {
+            createAccountField.clear();
         }
     }
 
-    public void insertDataWithoutEmail(){
+    public void insertDataWithoutEmail() {
         getDriver().navigate().refresh();
         //makeFieldsEmpty();
         insertDataWithout(3);
     }
 
-    public void insertDataWithoutPassword(){
+    public void insertDataWithoutPassword() {
         getDriver().navigate().refresh();
         //makeFieldsEmpty();
         insertDataWithout(4);
     }
 
-    public void fillInForm(){
-        typeInto(createAccountFields.get(0),Constants.ACCOUNT_DATA_ARRAY[0]);
+    public void fillInForm() {
+        typeInto(createAccountFields.get(0), Constants.ACCOUNT_DATA_ARRAY[0]);
         insertDataWithoutFirstName();
     }
 

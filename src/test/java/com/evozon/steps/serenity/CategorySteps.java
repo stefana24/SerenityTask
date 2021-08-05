@@ -7,15 +7,14 @@ public class CategorySteps {
     private CategoryPage categoryPage;
 
     @Step
-    public void navigateToCategoryAndSubcategory(String categoryTitle,String categorySubtitle){
+    public void navigateToCategoryAndSubcategory(String categoryTitle, String categorySubtitle) {
         categoryPage.navigateToCategory(categoryTitle);
         categoryPage.navigateToSubcategory(categorySubtitle);
     }
 
     @Step
-    public void clickOnProduct(String productName){
+    public void clickOnProduct(String productName) {
         categoryPage.clickOnProduct(productName);
     }
-
 
 }

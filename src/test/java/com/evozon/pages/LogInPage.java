@@ -13,17 +13,16 @@ public class LogInPage extends BasePage {
     @FindBy(id = "send2")
     private WebElementFacade loginButton;
 
-    public void setEmailField(String email){
+    public void setEmailField(String email) {
         typeInto(emailField, email);
     }
 
-    public void setPasswordField(String password){
+    public void setPasswordField(String password) {
         typeInto(passwordField, password);
     }
 
-    public void clickOnLoginButton(){
+    public void clickOnLoginButton() {
         clickOn(loginButton);
     }
-
 
 }

@@ -4,28 +4,31 @@ import com.evozon.pages.ProductPage;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
-public class ProductSteps{
+public class ProductSteps {
     private ProductPage productPage;
+
     @Step
-    public void clickOnAddToCart(){
+    public void clickOnAddToCart() {
         productPage.clickOnAddToCartButton();
     }
+
     @Step
-    public void verifyColorErrorMessage(){
+    public void verifyColorErrorMessage() {
         Assert.assertTrue(productPage.isColorRequiredMessage());
     }
+
     @Step
-    public void verifySizeErrorMessage(){
+    public void verifySizeErrorMessage() {
         Assert.assertTrue(productPage.isSizeRequiredMessage());
     }
 
     @Step
-    public void setColor(String color){
+    public void setColor(String color) {
         productPage.selectColor(color);
     }
 
     @Step
-    public void setSize(String size){
+    public void setSize(String size) {
         productPage.selectSize(size);
     }
 }

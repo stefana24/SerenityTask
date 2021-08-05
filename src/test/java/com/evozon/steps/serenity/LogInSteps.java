@@ -13,27 +13,28 @@ public class LogInSteps {
     private DashboardPage dashboardPage;
 
     @Step
-    public void navigateToLoginPage(){
+    public void navigateToLoginPage() {
         //homePage.open();
         homePage.clickOnAccount();
         homePage.clickOnLogInLink();
     }
 
     @Step
-    public void loginWithCredentials(String email, String password){
+    public void loginWithCredentials(String email, String password) {
         loginPage.setEmailField(email);
         loginPage.setPasswordField(password);
         loginPage.clickOnLoginButton();
     }
+
     @Step
-    public void verifyLoggedIn(String value){
+    public void verifyLoggedIn(String value) {
         Assert.assertTrue(dashboardPage.isWelcomeMessage(value));
     }
 
     @Step
-    public void loginWithValidCredentials(){
+    public void loginWithValidCredentials() {
         navigateToLoginPage();
-        loginWithCredentials(Constants.USER_EMAIL,Constants.USER_PASS);
+        loginWithCredentials(Constants.USER_EMAIL, Constants.USER_PASS);
         verifyLoggedIn(Constants.NEW_USERNAME);
     }
 }

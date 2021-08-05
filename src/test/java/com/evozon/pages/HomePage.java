@@ -13,17 +13,18 @@ public class HomePage extends BasePage {
     @FindBy(css = "a[title='Log In']")
     private WebElementFacade logInLink;
 
-    @FindBy(css="a[title='Register'")
+    @FindBy(css = "a[title='Register'")
     private WebElementFacade registerLink;
 
-    public void clickOnAccount(){
+    public void clickOnAccount() {
         clickOn(accountLink);
     }
-    public void clickOnLogInLink(){
+
+    public void clickOnLogInLink() {
         clickOn(logInLink);
     }
 
-    public void clickOnRegisterLink(){
+    public void clickOnRegisterLink() {
         clickOn(registerLink);
     }
 }

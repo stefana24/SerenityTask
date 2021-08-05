@@ -10,9 +10,9 @@ public class LogInTest extends BaseTest {
     private LogInSteps loginStep;
 
     @Test
-    public void loginTestWithValidUsername(){
+    public void loginTestWithValidUsername() {
         loginStep.navigateToLoginPage();
-        loginStep.loginWithCredentials(Constants.USER_EMAIL,Constants.USER_PASS);
+        loginStep.loginWithCredentials(Constants.USER_EMAIL, Constants.USER_PASS);
         loginStep.verifyLoggedIn(Constants.NEW_USERNAME);
     }
 

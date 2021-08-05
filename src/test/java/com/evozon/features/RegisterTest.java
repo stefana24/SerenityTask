@@ -6,7 +6,7 @@ import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 
-public class RegisterTest extends BaseTest{
+public class RegisterTest extends BaseTest {
 
     @Steps
     private RegisterSteps registerSteps;
@@ -16,7 +16,7 @@ public class RegisterTest extends BaseTest{
 
 
     @Test
-    public void registrationTest(){
+    public void registrationTest() {
         registerSteps.navigateToRegisterPage();
         registerSteps.verifyMessageWhenFirstNameLeftEmpty();
         registerSteps.verifyMessageWhenLastNameLeftEmpty();
