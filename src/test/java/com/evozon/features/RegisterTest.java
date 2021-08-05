@@ -16,12 +16,12 @@ public class RegisterTest extends BaseTest{
 
 
     @Test
-    public void registrationWithoutFirstNameTest(){
+    public void registrationTest(){
         registerSteps.navigateToRegisterPage();
         registerSteps.verifyMsgWhenFirstNameLeftEmpty();
         registerSteps.verifyMsgWhenLastNameLeftEmpty();
-//        registerSteps.verifyMsgWhenEmailLeftEmpty();
-//        registerSteps.verifyMsgWhenPasswordLeftEmpty();
+        registerSteps.verifyMsgWhenEmailLeftEmpty();
+        registerSteps.verifyMsgWhenPasswordLeftEmpty();
         registerSteps.fillInFormAndCheckNewsletter();
         logInStep.verifyLoggedIn(Constants.user);
     }

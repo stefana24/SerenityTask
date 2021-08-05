@@ -18,7 +18,7 @@ public class Constants {
 //    public static final String EMAIL = "ana@yahoo.com";
 //    public static final String PASSWORD = "123456";
 
-    public static String[] ACCOUNT_DATA_ARRAY = {"Ana","Maria","Dan","anaDan@yahoo.com","123456","123456"};
-    public static String user = "Ana Maria Dan";
+    public static String[] ACCOUNT_DATA_ARRAY = {"Ama","Mara","Dan","amaadan@yahoo.com","123456","123456"};
+    public static String user = "Ama Mara Dan";
 
 }
