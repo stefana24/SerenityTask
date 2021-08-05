@@ -17,7 +17,7 @@ public class ProductPage extends BasePage {
 
 
 
-    public void clickOnAddToCartBtn(){
+    public void clickOnAddToCartButton(){
         clickOn(addToCartBtn);
     }
 

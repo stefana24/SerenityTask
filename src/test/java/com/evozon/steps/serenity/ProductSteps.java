@@ -8,7 +8,7 @@ public class ProductSteps{
     private ProductPage productPage;
     @Step
     public void clickOnAddToCart(){
-        productPage.clickOnAddToCartBtn();
+        productPage.clickOnAddToCartButton();
     }
     @Step
     public void verifyColorErrorMessage(){
