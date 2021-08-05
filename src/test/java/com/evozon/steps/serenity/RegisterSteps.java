@@ -18,14 +18,14 @@ public class RegisterSteps {
     }
 
     @Step
-    public void verifyMsgWhenFirstNameLeftEmpty(){
+    public void verifyMessageWhenFirstNameLeftEmpty(){
         registerPage.insertDataWithoutFirstName();
         registerPage.clickOnRegisterBtn();
         Assert.assertTrue(registerPage.isRequiredFieldMsgDisplayed());
     }
 
     @Step
-    public void verifyMsgWhenLastNameLeftEmpty(){
+    public void verifyMessageWhenLastNameLeftEmpty(){
         //registerPage.makeFieldsEmpty();
         getDriver().navigate().refresh();
         registerPage.insertDataWithoutLastName();
@@ -34,7 +34,7 @@ public class RegisterSteps {
     }
 
     @Step
-    public void verifyMsgWhenEmailLeftEmpty(){
+    public void verifyMessageWhenEmailLeftEmpty(){
 //        registerPage.makeFieldsEmpty();
 
         registerPage.insertDataWithoutEmail();
@@ -43,7 +43,7 @@ public class RegisterSteps {
     }
 
     @Step
-    public void verifyMsgWhenPasswordLeftEmpty(){
+    public void verifyMessageWhenPasswordLeftEmpty(){
 //        registerPage.makeFieldsEmpty();
         registerPage.insertDataWithoutPassword();
         registerPage.clickOnRegisterBtn();

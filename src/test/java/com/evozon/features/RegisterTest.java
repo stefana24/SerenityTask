@@ -18,10 +18,10 @@ public class RegisterTest extends BaseTest{
     @Test
     public void registrationTest(){
         registerSteps.navigateToRegisterPage();
-        registerSteps.verifyMsgWhenFirstNameLeftEmpty();
-        registerSteps.verifyMsgWhenLastNameLeftEmpty();
-        registerSteps.verifyMsgWhenEmailLeftEmpty();
-        registerSteps.verifyMsgWhenPasswordLeftEmpty();
+        registerSteps.verifyMessageWhenFirstNameLeftEmpty();
+        registerSteps.verifyMessageWhenLastNameLeftEmpty();
+        registerSteps.verifyMessageWhenEmailLeftEmpty();
+        registerSteps.verifyMessageWhenPasswordLeftEmpty();
         registerSteps.fillInFormAndCheckNewsletter();
         logInStep.verifyLoggedIn(Constants.user);
     }
