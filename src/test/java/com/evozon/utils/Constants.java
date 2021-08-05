@@ -19,6 +19,6 @@ public class Constants {
 //    public static final String PASSWORD = "123456";
 
     public static String[] ACCOUNT_DATA_ARRAY = {"Ama","Mara","Dan","amaadan@yahoo.com","123456","123456"};
-    public static String user = "Ama Mara Dan";
+    public static String USER = "Ama Mara Dan";
 
 }

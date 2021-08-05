@@ -23,7 +23,7 @@ public class RegisterTest extends BaseTest{
         registerSteps.verifyMessageWhenEmailLeftEmpty();
         registerSteps.verifyMessageWhenPasswordLeftEmpty();
         registerSteps.fillInFormAndCheckNewsletter();
-        logInStep.verifyLoggedIn(Constants.user);
+        logInStep.verifyLoggedIn(Constants.USER);
     }
 
 }
