@@ -36,7 +36,7 @@ public class ShoppingCartTest extends BaseTest{
         productSteps.setColor("White");
         productSteps.setSize("M");
         productSteps.clickOnAddToCart();
-        shoppingSteps.verifyMessageProductWasAdded("linen blazer");
+        shoppingSteps.verifyMessageWhenProductWasAdded("linen blazer");
         shoppingSteps.verifyProductWasAddedInContainer("linen blazer");
     }
 }

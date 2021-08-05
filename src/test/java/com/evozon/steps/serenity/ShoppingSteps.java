@@ -9,7 +9,7 @@ public class ShoppingSteps {
     private ShoppingCartPage shoppingcartPage;
 
     @Step
-    public void verifyMessageProductWasAdded(String productName){
+    public void verifyMessageWhenProductWasAdded(String productName){
         Assert.assertTrue(shoppingcartPage.isAddedMessage(productName));
     }
 
