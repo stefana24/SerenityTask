@@ -31,7 +31,7 @@ public class LogInStep {
     }
 
     @Step
-    public void loggInSteps(){
+    public void loginWithValidCredentials(){
         navigateToLoginPage();
         loginWithCredentials(Constants.USER_EMAIL,Constants.USER_PASS);
         verifyLoggedIn(Constants.NEW_USERNAME);

@@ -26,7 +26,7 @@ public class ShoppingCartTest extends BaseTest{
 
     @Test
     public void addProductToCartWithLoginTest(){
-        logInStep.loggInSteps();
+        logInStep.loginWithValidCredentials();
         driver.navigate().to(Constants.BASE_URL);
         categorySteps.navigateToCategoryAndSubcategory("men","new arrivals");
         categorySteps.clickOnProduct("linen blazer");
