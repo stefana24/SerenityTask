@@ -16,7 +16,7 @@ public class RegisterTest extends BaseTest{
 
 
     @Test
-    public void registrationWithoutFirstNameTest(){
+    public void registrationTest(){
         registerSteps.navigateToRegisterPage();
         registerSteps.verifyMsgWhenFirstNameLeftEmpty();
         registerSteps.verifyMsgWhenLastNameLeftEmpty();
