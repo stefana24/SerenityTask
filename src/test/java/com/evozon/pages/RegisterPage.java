@@ -30,6 +30,7 @@ public class RegisterPage extends BasePage{
     }
 
     public boolean isRequiredFieldMsgDisplayed(){
+        element(requiredFieldMessage).waitUntilVisible();
         return requiredFieldMessage.isDisplayed();
     }
 
@@ -61,17 +62,19 @@ public class RegisterPage extends BasePage{
 
     public void makeFieldsEmpty(){
         for(int i=0;i<createAccountFields.size();i++) {
-            typeInto(createAccountFields.get(i),"");
+            createAccountFields.get(i).clear();
         }
     }
 
     public void insertDataWithoutEmail(){
-        makeFieldsEmpty();
+        getDriver().navigate().refresh();
+        //makeFieldsEmpty();
         insertDataWithout(3);
     }
 
     public void insertDataWithoutPassword(){
-        makeFieldsEmpty();
+        getDriver().navigate().refresh();
+        //makeFieldsEmpty();
         insertDataWithout(4);
     }
 

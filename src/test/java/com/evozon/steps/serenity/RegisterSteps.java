@@ -5,6 +5,8 @@ import com.evozon.pages.RegisterPage;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
+
 public class RegisterSteps {
     private HomePage homePage;
     private RegisterPage registerPage;
@@ -24,7 +26,8 @@ public class RegisterSteps {
 
     @Step
     public void verifyMsgWhenLastNameLeftEmpty(){
-        registerPage.makeFieldsEmpty();
+        //registerPage.makeFieldsEmpty();
+        getDriver().navigate().refresh();
         registerPage.insertDataWithoutLastName();
         registerPage.clickOnRegisterBtn();
         Assert.assertTrue(registerPage.isRequiredFieldMsgDisplayed());
@@ -33,6 +36,7 @@ public class RegisterSteps {
     @Step
     public void verifyMsgWhenEmailLeftEmpty(){
 //        registerPage.makeFieldsEmpty();
+
         registerPage.insertDataWithoutEmail();
         registerPage.clickOnRegisterBtn();
         Assert.assertTrue(registerPage.isRequiredFieldMsgDisplayed());
