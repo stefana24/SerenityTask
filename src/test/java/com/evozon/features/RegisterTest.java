@@ -1,6 +1,6 @@
 package com.evozon.features;
 
-import com.evozon.steps.serenity.LogInStep;
+import com.evozon.steps.serenity.LogInSteps;
 import com.evozon.steps.serenity.RegisterSteps;
 import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Steps;
@@ -12,7 +12,7 @@ public class RegisterTest extends BaseTest{
     private RegisterSteps registerSteps;
 
     @Steps
-    private LogInStep logInStep;
+    private LogInSteps logInStep;
 
 
     @Test

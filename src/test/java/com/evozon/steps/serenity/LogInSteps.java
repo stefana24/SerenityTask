@@ -7,7 +7,7 @@ import com.evozon.utils.Constants;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
-public class LogInStep {
+public class LogInSteps {
     private HomePage homePage;
     private LogInPage loginPage;
     private DashboardPage dashboardPage;

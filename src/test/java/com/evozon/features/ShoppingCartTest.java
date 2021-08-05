@@ -2,7 +2,7 @@ package com.evozon.features;
 
 
 import com.evozon.steps.serenity.CategorySteps;
-import com.evozon.steps.serenity.LogInStep;
+import com.evozon.steps.serenity.LogInSteps;
 import com.evozon.steps.serenity.ProductSteps;
 import com.evozon.steps.serenity.ShoppingSteps;
 import com.evozon.utils.Constants;
@@ -21,7 +21,7 @@ public class ShoppingCartTest extends BaseTest{
     private ShoppingSteps shoppingSteps;
 
     @Steps
-    private LogInStep logInStep;
+    private LogInSteps logInStep;
 
 
     @Test
