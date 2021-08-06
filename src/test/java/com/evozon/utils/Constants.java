@@ -21,4 +21,11 @@ public class Constants {
     public static final String[] ACCOUNT_DATA_ARRAY = {"Ama","Mara","Dan","amaadan@yahoo.com","123456","123456"};
     public static String USER = "Ama Mara Dan";
 
+    public static final String CHECKOUT="checkout";
+
+
+    public static final String PRODUCT = "linen blazer";
+
+    public static final String SUCCESS_MSG_ORDER = "Thank you for your purchase!";
+
 }

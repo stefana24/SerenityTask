@@ -14,6 +14,13 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(css = ".cart-table tbody tr")
     List<WebElementFacade> listOfCartProducts;
 
+    @FindBy(css=".page-title button[class=\"button btn-proceed-checkout btn-checkout\"]")
+    private WebElementFacade proceedToCheckOutButton;
+
+    public void clickOnProceedToCheckOutButton(){
+        clickOn(proceedToCheckOutButton);
+    }
+
     public boolean isAddedMessage(String productName){
         return successMessage.getText().equalsIgnoreCase(productName+ Constants.WAS_ADDED_TO_SHOPPING_CART_MESSAGE);
     }
